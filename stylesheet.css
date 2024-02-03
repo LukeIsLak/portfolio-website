@@ -1,0 +1,106 @@
+:root {
+    --main-header-text-marg: 3px;
+    --text-size: 30px;
+    --text-cursor: 50px;
+    --text-cursor-weight: 3px;
+    --accent-colour: rgb(236, 93, 27);
+    --background-colour: rgb(31, 31, 31);
+    --text-colour: rgb(228, 225, 221);
+}
+
+body {
+    overflow: hidden;
+}
+
+#main-screen-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#title-container {
+    background-color: var(--background-colour);
+    background-color: aqua;
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    flex-wrap: none;
+    justify-content: center;
+    align-items: center;
+}
+#text-change-container {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    background-color: aqua;
+    padding-top: 30vh;
+}
+
+#img-1 {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+}
+
+#text-change-container > h2 {
+    font-size: 60px;
+}
+
+#title-to-change {
+    color: var(--accent-colour);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.main-header {
+    font-size: var(--text-size);
+    color: var(--text-colour);
+}
+
+#type-cursor {
+    display: inline;
+    width: var(--text-cursor-weight);
+    height: 10vh;
+    margin: var(--text-cursor) 0 var(--text-cursor) 0 ;
+    background-color: var(--accent-colour);
+    animation-name: text-cursor-blink;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes text-cursor-blink {
+    0% {opacity: 100%;}
+    24% {opacity: 100%;}
+    25% {opacity: 0%;}
+    49% {opacity: 0%;}
+    50% {opacity: 100%;}
+    74% {opacity: 100%;}
+    75% {opacity: 0%;}
+    99% {opacity: 0%;}
+    100% {opacity: 100%;}
+}
+.fancy-text {
+    display: inline-block;
+    transition: transform 350ms ease;
+}
+.main-header-container {
+    background-color: var(--background-colour);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    white-space: pre;
+}
